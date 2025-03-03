@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обновлённая задача</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <form id="/tasks/{{task_id}}">
+                <input type="text" name="title" placeholder="New Title" required>
+                <input type="text" name="description" placeholder="New Description" required>
+                <select name="status">
+                    <option value="new">New</option>
+                    <option value="in_progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <button type="button" class="submit-button" onclick="updateTask({{ task.id }}, event)">Update</button>
+            </form>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
