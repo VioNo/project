@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фронтенд-Task</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div>
+        {% for task in tasks %}
+        <h1> Список Tasks для user_id = {{task.user_id}} </h1>
+        <div>
+            <h2> Title: {{ task.title }}</h2>
+            <p> Description: {{ task.description }}</p>
+            <p> Status: {{ task.status }}</p>
+            <p> Create_at: {{ task.create_at }}</p>
+          <button type="button" id="update-button" class="submit-button" onclick="updateTask({{ task.id }}, event)">update</button>
+        </div>
+        {% endfor %}
+    </div>
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
