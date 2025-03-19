@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+asyncpg
+jinja2
+python-jose
+passlib
+python-dotenv
+pydantic
+pydantic-settings
+alembic
